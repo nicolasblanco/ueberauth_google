@@ -4,6 +4,7 @@ defmodule Ueberauth.Strategy.Google do
   """
 
   use Ueberauth.Strategy,
+    ignores_csrf_attack: true,
     uid_field: :sub,
     default_scope: "email",
     hd: nil,
